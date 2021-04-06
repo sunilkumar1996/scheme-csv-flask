@@ -1,0 +1,5 @@
+new_env/
+.vscode/
+__pycache__/
+bristol-air-quality-data.csv
+bristol-air-quality-data.sql

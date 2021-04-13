@@ -1,17 +1,25 @@
 {% extends 'base.html' %}
-{% block title %}Add The CSV File{% endblock title %}
+{% block title %} Add The CSV File{% endblock title %}
 
 {% block content %}
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <form action="" method="post">
-                    <label for="formFileLg" class="form-label">Large file input example</label>
-                    <input class="form-control form-control-lg" id="formFileLg" type="file">
-                </form>
+    <div class="container">
+        <div class="col-md-12 py-5">
+            <div class="row">
+                <div class="col-4">
+                </div>
+                <div class="col-4">
+                    <form action="{{ url_for('main') }}" method="POST">
+                        <label for="formFileLg" class="form-label">Select CSV File</label>
+                        <input class="form-control form-control-lg" id="formFileLg" type="file" name="file">
+                        <div class="mt-5">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                            <button type="button" class="btn btn-warning">Restart</button>
+                            <a href="#"  class="btn btn-danger">Data-Save</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-4"></div>
             </div>
-            <div class="col-4"></div>
         </div>
     </div>
 {% endblock content %}
